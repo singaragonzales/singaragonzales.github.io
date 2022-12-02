@@ -3,15 +3,15 @@ const Social = () => {
     const links = [
         {
           classname:"uil uil-github",
-          href:"#about",
+          href:"https://github.com/singaragonzales",
         },
         {
           classname:"uil uil-linkedin",
-          href:"#skills",
+          href:"https://www.linkedin.com/in/singara-gonzales-ojeda-174256213/",
         },
         {
           classname:"bx bxl-upwork",
-          href:"#skills",
+          href:"https://www.upwork.com/freelancers/~013ae06c4e2c1444f7",
         }
     ]
 
