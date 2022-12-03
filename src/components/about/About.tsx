@@ -1,27 +1,35 @@
 import React from 'react'
 import { AboutImg } from '../../assets/image';
-import CV from "../../assets/pdf/Resume__Singara_Gonzales.pdf";
+import CV_en from "../../assets/pdf/Resume__Singara_Gonzales_en.pdf";
+import CV_es from "../../assets/pdf/Resume__Singara_Gonzales_es.pdf";
 import { Files } from '../../assets/svg';
 import "./about.scss";
+import { t } from 'i18next';
 import Info from './Info';
 
 const About = () => {
+
   return (
     <section className="about section" id="about">
-        <h2 className="section__title">About Me</h2>
+        <h2 className="section__title">{t("menu.about")}</h2>
         <span className="separator"></span>
-        <span className="section__subtitle"></span>
-
         <div className="about__container container grid">
           <img className="about__img" src={AboutImg} alt="" />
           <div className="about__data">
             <p className="about__description">
-              I am a web developer specialized in MEAN and MERN. I work in specialized data management systems, which have increased the productivity of companies and user satisfaction. <br/><br/> 
-              I consider myself a responsible person, with initiative and the ability to work in a team, in order to achieve the proposed objectives in the short and long term.
-            
+              {t("about.me.description.1")}
+            </p>
+            <p className="about__description">
+              {t("about.me.description.2")}
             </p>
             <Info />
-            <a download="" href={CV} className="button button--flex">Download CV <Files /></a>
+            <a 
+              download="" 
+              href={localStorage.getItem("language") === "es" ? CV_es : CV_en} 
+              className="button button--flex"
+            >
+              {t("download.cv")} <Files />
+            </a>
           </div>
         </div>
     </section>

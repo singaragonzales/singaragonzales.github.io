@@ -149,17 +149,6 @@ img {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   margin-bottom: 0.5rem;
-}
-
-.section__subtitle{
-  text-align: center;
-  display: block;
-  font-size:  var(--small-font-size);
-  margin-bottom:  4rem;
-}
-
-.section__title,
-.sectipn__subtitle {
   text-align: center;
 }
 
@@ -222,9 +211,6 @@ img {
   }
   .section{
     padding: 2rem 0 4rem;
-  }
-  .section__subtitle{
-    margin-bottom: var(--mb-3);
   }
 }
 

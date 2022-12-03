@@ -142,9 +142,14 @@
 }
 
 .home__scroll {
-    margin-left: 9.25rem;
+    margin-top: var(--mb-2);
     .home__scroll-button{
         height: 39px;
+        display: inline-flex;
+        align-items: center;
+        width: -moz-fit-content;
+        width: fit-content;
+        cursor: pointer;
     }
 }
 

@@ -1,14 +1,15 @@
+import { t } from 'i18next'
 import React from 'react'
 
 const Backend = () => {
 
     const skills = [
-        {title: "NodeJS", text: "Intermediate"},
-        {title: "Express", text: "Intermediate"},
-        {title: "Golang", text: "Basic"},
-        {title: "MongoDB", text: "Advanced"},
-        {title: "MySQL", text: "Intermediate"},
-        {title: "Git", text: "Advanced"},
+        {title: "NodeJS", text: `${t("skills.intermediate")}`},
+        {title: "Express", text: `${t("skills.intermediate")}`},
+        {title: "Golang", text: `${t("skills.basic")}`},
+        {title: "MongoDB", text: `${t("skills.advanced")}`},
+        {title: "MySQL", text: `${t("skills.intermediate")}`},
+        {title: "Git", text: `${t("skills.advanced")}`},
     ]
 
     const BackSkills = ({data}: any) => {
@@ -25,13 +26,13 @@ const Backend = () => {
 
   return (
     <div className="skills__content">
-        <h3 className="skills__title">Backend Developer</h3>
+        <h3 className="skills__title">{t("backend")}</h3>
         <div className="skills__box">
             <div className="skills__group">
                 {skills.map((skill, i) => (
-                    <React.Fragment>
+                    <React.Fragment key={`bk1-${i}`}>
                         {i % 2 === 0 && (
-                            <BackSkills 
+                            <BackSkills
                                 data={skill}
                             />
                         )}
@@ -40,7 +41,7 @@ const Backend = () => {
             </div>
             <div className="skills__group">
                 {skills.map((skill, i) => (
-                    <React.Fragment>
+                    <React.Fragment key={`bk2-${i}`}>
                         {i % 2 !== 0 && (
                             <BackSkills 
                                 data={skill}

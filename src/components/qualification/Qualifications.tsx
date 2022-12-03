@@ -1,18 +1,19 @@
+import { t } from 'i18next';
 import React from 'react';
 import "./qualification.scss";
 
 const Qualifications = () => {
 
-    const [toggleState, setToggleState] = React.useState<number>(1);
+    const [toggleState, setToggleState] = React.useState<number>(0);
 
     const toggleTab = (index:number) => {
         setToggleState(index)
     }
 
     const ExperienceData = [
-        {id: 1, date: "DEC 2017 - JAN 2020", company: "Fulltimeforce ", company_subtitle: "- Software Company", job: "Frontend Developer"},
-        {id: 2, date: "MAR 2020 - FEB 2022", company: "Lilab ", company_subtitle: "- Software Company", job: "Frontend Developer"},
-        {id: 3, date: "MAR - NOV 2022", company: "SDSharp", company_subtitle: "- Software Company", job: "Fullstack Developer"},
+        {id: 1, date: `${t("experience.date.1")}`, company: "Fulltimeforce ", company_subtitle: `- ${t("company.software")}`, job: `${t("frontend.dev")}`},
+        {id: 2, date: `${t("experience.date.2")}`, company: "Lilab ", company_subtitle: `- ${t("company.software")}`, job: `${t("frontend.dev")}`},
+        {id: 3, date: `${t("experience.date.3")}`, company: "SDSharp", company_subtitle: `- ${t("company.software")}`, job: `${t("fullstack.dev")}`},
     ]
 
     const ExperienceBox = ({data}: any) => {
@@ -28,7 +29,7 @@ const Qualifications = () => {
                     onClick={() => {
                         toggleTab(data.id) 
                     }}
-                >View More
+                >{t("view.more")}
                     <i className="uil uil-arrow-right viewmore__button-icon"></i>
                 </span>
             </div>
@@ -37,16 +38,15 @@ const Qualifications = () => {
 
   return (
     <section className="qualification section">
-        <h2 className="section__title">Experience</h2>
+        <h2 className="section__title">{t("menu.experience")}</h2>
         <span className="separator"></span>
-        <span className="section__subtitle"></span>
         <div className="qualification__container container grid">
             <div className="experience-left">
                 <div className="timeline">
                     {ExperienceData.map((experience, i) => (
-                        <React.Fragment>
+                        <React.Fragment key={`exp1-${i}`}>
                             {i % 2 === 0 && (
-                                <ExperienceBox 
+                                <ExperienceBox
                                     data={experience}
                                 />
                             )}
@@ -57,7 +57,7 @@ const Qualifications = () => {
             <div className="experience-right mt-[7rem]">
                 <div className="timeline">
                     {ExperienceData.map((experience, i) => (
-                        <React.Fragment>
+                        <React.Fragment key={`exp2-${i}`}>
                             {i % 2 !== 0 && (
                                 <ExperienceBox 
                                     data={experience}
@@ -71,6 +71,7 @@ const Qualifications = () => {
         <div className="qualification__container_small container grid">
             {ExperienceData.map((experience, i) => (
                 <ExperienceBox 
+                    key={`exp0-${i}`}
                     data={experience}
                 />
             ))}  

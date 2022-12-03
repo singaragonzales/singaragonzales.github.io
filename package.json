@@ -13,6 +13,8 @@
     "babel-plugin-relay": "^14.1.0",
     "boxicons": "^2.1.4",
     "i18next": "^22.0.6",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-xhr-backend": "^3.2.2",
     "primeicons": "^6.0.1",
     "primereact": "^8.7.2",
     "react": "^18.2.0",

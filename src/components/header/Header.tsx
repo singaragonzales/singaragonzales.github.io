@@ -1,12 +1,15 @@
 import React from 'react'
 import "./header.scss";
 import { useTranslation } from "react-i18next";
-import Contact from '../contact/Contact';
+import { FlagSpain, FlagUSA } from '../../assets/svg';
+import { t } from 'i18next';
 
 const Header: React.FunctionComponent = () => {
   const [themeColor, setThemeColor] = React.useState<string>("light");
   const [linkActive, setLinkActive] = React.useState<string>("Home");
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
+
+  const { i18n } = useTranslation();
 
   window.addEventListener("scroll", function() {
     const header = document.querySelector(".header");
@@ -20,22 +23,22 @@ const Header: React.FunctionComponent = () => {
   const menu = [
     {
       classname:"estate",
-      name:"Home",
+      name:t("menu.home"),
       href:"#home",
     },
     {
       classname:"user",
-      name:"About",
+      name:t("menu.about"),
       href:"#about",
     },
     {
       classname:"file-alt",
-      name:"Skills",
+      name:t("menu.skills"),
       href:"#skills",
     },
     {
       classname:"message",
-      name:"Contact",
+      name:t("menu.contact"),
     },
     // {
     //   classname:"scenery",
@@ -44,13 +47,17 @@ const Header: React.FunctionComponent = () => {
     // },
   ]
 
+  const changeLocalLanguage = (e: string) => {
+    localStorage.setItem("language", e);
+  };
+
   const LiComponent = ({classname, name, href, active}:any) => {
     return (
       <li className="nav__item">
         <a href={href} className={`nav__link ${active ? "active-link" : ""}`}
           onClick={() => {
             setLinkActive(name)
-            if(name === "Contact"){
+            if(name === t("menu.contact")){
               window.scrollTo(0, document.body.scrollHeight);
             }
           }}
@@ -64,11 +71,12 @@ const Header: React.FunctionComponent = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" className="nav__logo">Singara Gonzales</a>
+        <a href="#home" className="nav__logo">{t("name")}</a>
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
           <ul className="nav__list grid">
-            {menu.map(link => (
+            {menu.map((link, i) => (
               <LiComponent 
+                key={`li-${i}`}
                 classname={link.classname}
                 name={link.name}
                 href={link.href}
@@ -89,6 +97,21 @@ const Header: React.FunctionComponent = () => {
                   setThemeColor(themeColor === "light" ? "dark" : "light")
                 }}
               ></i>
+            </div>
+            <div className='flex justify-center items-center'>
+              {i18n.language === "es" ? (
+                <FlagUSA className='cursor-pointer' onClick={() => {
+                  i18n.changeLanguage("en");
+                  changeLocalLanguage("en")
+                  }} 
+                />
+              ) : (
+                <FlagSpain className='cursor-pointer' onClick={() => {
+                  i18n.changeLanguage("es");
+                  changeLocalLanguage("es")
+                  }} 
+                />
+              )}
             </div>
           </ul>
           <i className="uil uil-times nav__close" onClick={() => {setShowMenu(!showMenu)}}></i>

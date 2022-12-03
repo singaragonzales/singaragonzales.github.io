@@ -6,6 +6,7 @@
 }
 
 .skills__container{
+    padding-top: 4rem;
     grid-template-columns: repeat(2, 350px);
     column-gap: 3rem;
     justify-content: center;
@@ -82,6 +83,9 @@
     }
     .skills__content{
         padding: 1.5rem;
+    }
+    .skills__box{
+        justify-content: space-around;
     }
 }
 

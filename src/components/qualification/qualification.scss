@@ -11,6 +11,7 @@
 .qualification__container{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
+    padding-top: 4rem;
     .experience-left{
         display: flex;
         justify-content: end;
@@ -247,6 +248,13 @@
     }
     .qualification__button{
         margin: 0 var(--mb-0-75);
+    }
+    .qualification__container_small{
+        .timeline__item{
+            max-width: 100%;
+            min-width: auto;
+           width: 100%;
+        }
     }
 }
 

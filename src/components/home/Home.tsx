@@ -2,7 +2,6 @@ import React from 'react';
 import Social from './Social';
 import Data from './Data';
 import "./home.scss";
-import ScrollDown from './ScrollDown';
 
 const Home: React.FunctionComponent = () => {
   return (
@@ -13,7 +12,6 @@ const Home: React.FunctionComponent = () => {
             <div className="home__img"></div>
             <Data />
         </div>
-        <ScrollDown />
       </div>
     </section>
   )
