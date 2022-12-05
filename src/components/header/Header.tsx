@@ -65,7 +65,7 @@ const Header: React.FunctionComponent = () => {
             <i className={`uil nav__icon uil-${classname}`}></i>{name}
           </span>
         ) : (
-          <a href={href} className={`nav__link ${active ? "active-link" : ""}`}
+          <a href={href} className={`nav__link ${active ? "active-link" : ""}`} aria-label="Go to the active section page"
             onClick={() => {
               setLinkActive(name)
               if(name === t("menu.contact")){
@@ -84,7 +84,7 @@ const Header: React.FunctionComponent = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="#home" className="nav__logo">{t("name")}</a>
+        <a href="#home" className="nav__logo" aria-label="Refresh the page">{t("name")}</a>
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
           <ul className="nav__list grid">
             {menu.map((link, i) => (

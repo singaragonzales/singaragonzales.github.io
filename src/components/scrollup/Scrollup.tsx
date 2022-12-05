@@ -11,7 +11,7 @@ const Scrollup = () => {
     })
 
     return (
-        <a href="#home" className="scrollup">
+        <a href="#home" className="scrollup" aria-label="Go to up page">
             <i className="uil uil-arrow-up scrollup__icon"></i>
         </a>
     )

@@ -25,7 +25,7 @@ const Data = () => {
         {t("home.contact.button")}<Send />
       </div>
       <div className="home__scroll">
-        <a href="#about" className="home__scroll-button">
+        <a href="#about" className="home__scroll-button" aria-label="Go to about me section">
           <Scroll />
           <span className="home__scroll-name">{t("scroll.down")}</span>
           <i className="uil uil-arrow-down home"></i>

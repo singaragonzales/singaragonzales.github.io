@@ -9,8 +9,8 @@ const Contact = () => {
                 <div className='max-w-[500px]'>
                     <h2 className="contact__title">Hey there!</h2>
                     <p className="contact__subtitle">If you want to contact me you can do it through this email {" "}
-                        <a href='mailto:singara.gonzales@gmail.com' rel="noreferrer" target="_blank" className='underline'>singara.gonzales@gmail.com</a>, 
-                        or send me a message on <a href='#home' className='underline'>social networks</a>.
+                        <a href='mailto:singara.gonzales@gmail.com' rel="noreferrer" target="_blank" className='underline' aria-label="Send me an email">singara.gonzales@gmail.com</a>, 
+                        or send me a message on <a href='#home' className='underline' aria-label="Go to my social networks buttons">social networks</a>.
                     </p>
                 </div>
                 <div className="generator__shape">

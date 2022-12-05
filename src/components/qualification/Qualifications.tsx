@@ -21,7 +21,7 @@ const Qualifications = () => {
             <div className="timeline__item">
                 <div className="circle__dot"></div>
                 <span className="timeline__date">{data.date}
-                    <i className="bx bx-calendar"></i>
+                    <i className="uil uil-calendar-alt"></i>
                 </span>
                 <h3 className="timeline__title">{data.company}{" "} <span>{data.company_subtitle}</span></h3>
                 <p className="timeline__text">{data.job}</p>

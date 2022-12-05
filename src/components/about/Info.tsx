@@ -13,7 +13,7 @@ const Info: React.FunctionComponent = () => {
   }
 
   const facts = [
-    {icon: "calendar", title: `${t("about.birthdate", {
+    {icon: "calendar-alt", title: `${t("about.birthdate", {
       year: getBirthdate(t("birthdate")),
     })}`},
     {icon: "briefcase-alt", title: `${t("about.freelance")}`},
@@ -24,7 +24,7 @@ const Info: React.FunctionComponent = () => {
   const ExpDataComp = ({data}: any) => {
     return(
       <div className="about__box">
-        <i className={`bx bx-${data.icon}`}></i>
+        <i className={`uil uil-${data.icon}`}></i>
         <h3 className="about__title">{data.title}</h3>
       </div>
     )

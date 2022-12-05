@@ -14,7 +14,7 @@ const About = () => {
         <h2 className="section__title">{t("menu.about")}</h2>
         <span className="separator"></span>
         <div className="about__container container grid">
-          <img className="about__img" src={AboutImg} alt="" />
+          <img className="about__img" src={AboutImg} alt="Singara Gonzales" />
           <div className="about__data">
             <p className="about__description">
               {t("about.me.description.1")}
@@ -27,6 +27,7 @@ const About = () => {
               download="" 
               href={localStorage.getItem("language") === "es" ? CV_es : CV_en} 
               className="button button--flex"
+              aria-label="Download my cv"
             >
               {t("download.cv")} <Files />
             </a>
