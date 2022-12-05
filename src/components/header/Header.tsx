@@ -98,7 +98,7 @@ const Header: React.FunctionComponent = () => {
                 }}
               ></i>
             </div>
-            <div className='flex justify-center items-center'>
+            <div className='header-languages flex justify-center items-center'>
               {i18n.language === "es" ? (
                 <FlagUSA className='cursor-pointer' onClick={() => {
                   i18n.changeLanguage("en");
@@ -117,7 +117,12 @@ const Header: React.FunctionComponent = () => {
           <i className="uil uil-times nav__close" onClick={() => {setShowMenu(!showMenu)}}></i>
         </div>
         <div className="nav__toggle">
-          <i className={`uil uil-${themeColor === "light" ? "sun" : "moon"} px-[10px]`}
+          <i className="uil uil-apps"
+            onClick={() => {
+              setShowMenu(!showMenu)
+            }}
+          ></i>
+          <i className={`uil uil-${themeColor === "light" ? "sun" : "moon"} pl-[10px]`}
              onClick={() => {
               const header = document.querySelector(".theme__page");
                 if(themeColor === "dark"){
@@ -130,11 +135,19 @@ const Header: React.FunctionComponent = () => {
               setThemeColor(themeColor === "light" ? "dark" : "light")
             }}
           ></i>
-          <i className="uil uil-apps"
-            onClick={() => {
-              setShowMenu(!showMenu)
-            }}
-          ></i>
+          {i18n.language === "es" ? (
+            <FlagUSA className='cursor-pointer w-[20px] ml-[10px]' onClick={() => {
+              i18n.changeLanguage("en");
+              changeLocalLanguage("en")
+              }} 
+            />
+          ) : (
+            <FlagSpain className='cursor-pointer w-[20px] ml-[10px]' onClick={() => {
+              i18n.changeLanguage("es");
+              changeLocalLanguage("es")
+              }} 
+            />
+          )}
         </div>
       </nav>
     </header>

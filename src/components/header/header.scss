@@ -132,7 +132,8 @@
                         font-size: 1.2rem;
                     }
 
-                    .header-switch{
+                    .header-switch,
+                    .header-languages{
                         display: none;
                     }
                 }
@@ -158,7 +159,9 @@
             .nav__icon,
             .nav__close,
             .nav__toggle {
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             .nav__toggle {
