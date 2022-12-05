@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.178f7da8.css",
+    "main.js": "/static/js/main.23768570.js",
+    "static/js/787.8078e234.chunk.js": "/static/js/787.8078e234.chunk.js",
+    "static/media/profile.jpg": "/static/media/profile.01418214281c985a42bb.jpg",
+    "static/media/about.jpg": "/static/media/about.25037666cca34f8f569a.jpg",
+    "static/media/fox_pc.png": "/static/media/fox_pc.27d45d8a7c4ce4e07b9e.png",
+    "static/media/Resume__Singara_Gonzales_es.pdf": "/static/media/Resume__Singara_Gonzales_es.9e7d7741f232fd1d8e53.pdf",
+    "static/media/Resume__Singara_Gonzales_en.pdf": "/static/media/Resume__Singara_Gonzales_en.0f586df911fe8e59b115.pdf",
+    "static/media/usa.svg": "/static/media/usa.82d787e83a8503f3d49884120658d734.svg",
+    "static/media/files.svg": "/static/media/files.74c3b361a053cb539ec37423a375bb40.svg",
+    "static/media/send.svg": "/static/media/send.a52765e7b8eaf9a7fc9b3e45bb6b85db.svg",
+    "static/media/scroll.svg": "/static/media/scroll.79fab67b95517195702c610c2352291f.svg",
+    "index.html": "/index.html",
+    "static/media/españa.svg": "/static/media/españa.6f90e724fc9bbf30bdaad997c0f393ba.svg",
+    "main.178f7da8.css.map": "/static/css/main.178f7da8.css.map",
+    "main.23768570.js.map": "/static/js/main.23768570.js.map",
+    "787.8078e234.chunk.js.map": "/static/js/787.8078e234.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.178f7da8.css",
+    "static/js/main.23768570.js"
+  ]
+}
