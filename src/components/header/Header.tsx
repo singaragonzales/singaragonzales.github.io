@@ -38,6 +38,7 @@ const Header: React.FunctionComponent = () => {
     },
     {
       classname:"message",
+      href:"#contact",
       name:t("menu.contact"),
     },
     // {
@@ -54,16 +55,28 @@ const Header: React.FunctionComponent = () => {
   const LiComponent = ({classname, name, href, active}:any) => {
     return (
       <li className="nav__item">
-        <a href={href} className={`nav__link ${active ? "active-link" : ""}`}
-          onClick={() => {
-            setLinkActive(name)
-            if(name === t("menu.contact")){
+        {name === t("menu.contact") ? (
+          <span className={`nav__link ${active ? "active-link" : ""}`}
+            onClick={() => {
+              setLinkActive(name)
               window.scrollTo(0, document.body.scrollHeight);
-            }
-          }}
-        >
-          <i className={`uil nav__icon uil-${classname}`}></i>{name}
-        </a>
+            }}
+          >
+            <i className={`uil nav__icon uil-${classname}`}></i>{name}
+          </span>
+        ) : (
+          <a href={href} className={`nav__link ${active ? "active-link" : ""}`}
+            onClick={() => {
+              setLinkActive(name)
+              if(name === t("menu.contact")){
+                window.scrollTo(0, document.body.scrollHeight);
+              }
+            }}
+          >
+            <i className={`uil nav__icon uil-${classname}`}></i>{name}
+          </a>
+        )}
+        
       </li>
     )
   }

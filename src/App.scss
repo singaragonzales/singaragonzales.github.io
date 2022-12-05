@@ -3,14 +3,13 @@
 
 :root{
   .light{
-    --title-color: #5E412F;
+    --title-color: #654321;
     // --background-home: #FFEADB;
     --background-home: #FEF7DC;
-    // --background-page: #94B49F;
-    --background-page: #679B9B;
+    // --background-page: #679B9B;
+    --background-page: #78afaf;
     --background-contact: #FF9A76;
     --container-color: #fff;
-
   }
   
   .dark{
@@ -19,7 +18,6 @@
     --background-page: #2B4865;
     --background-contact: #256D85;
     --container-color: #000;
-
   }
 
   --header-height: 3rem;
